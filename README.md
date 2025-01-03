@@ -1,8 +1,8 @@
-# Ecommerce-Website-Project
+# E-commerce Website Project
 ### Autor: 
 Arnau Muñoz Barrera 
 
-Ecologic Cars Ecommerce Website.
+Ecologic Cars E-commerce Website.
 
 ### Prerequisites
 - An IDE like IntelliJ IDEA, Visual Studio Code.
