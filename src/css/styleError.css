@@ -1,0 +1,29 @@
+.errorShow {
+    width: auto; 
+    height: auto;
+    background: rgba(19, 22, 26, 0.949);
+    border: 2px solid rgba(255,255,255,.2);
+    outline: none;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 20px; 
+    color: #fff;
+    position: absolute; 
+    top: 10%; 
+    right: 100px; 
+}
+
+.errorShow:hover{
+    border: 2px solid #ffffff98;
+}
+
+.errorShow a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}

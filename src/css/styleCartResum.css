@@ -1,0 +1,180 @@
+body {
+    background-color: rgba(19, 22, 26, 0.949);
+}
+
+#title{
+    width: 100%;
+}
+
+/* .cartPage {
+    margin: 80px auto;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cartInfo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #768499;
+    font-weight: bold;
+    font-family: "Geist Mono", monospace;   
+    font-size: 20px; 
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+td{
+    padding: 10px 5px;
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a{
+    color: #fff;
+    font-size: 12px;
+}
+
+td img{
+    margin-right: 20px;
+}
+
+.totalPrice{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.totalPrice td {
+    color: #fff;
+}
+
+.totalPrice table{
+    border-top: 3px solid #fff;
+    width: 100%;
+    max-width: 350px;
+}
+
+.row{
+    text-align: right;
+}
+
+.btn {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 5px;
+}
+
+.btn2 {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 5px;
+}
+
+.cancel2 {
+    width: 16em;
+    height: 2.5em;
+    cursor: pointer;
+    border: 1px solid #768499;
+    border-radius: 1em;
+    color: #1e293b;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: #fffffff1;
+    transition-duration: .3;
+    box-shadow: rgba(0,0,0,0.1);
+    margin-left: 20px;
+}
+
+.cancel2:hover {
+    background-color: #f1f5f9;
+}
+
+.cancel {
+    width: 7.5em;
+    height: 2.5em;
+    cursor: pointer;
+    border: 1px solid #768499;
+    border-radius: 1em;
+    color: #1e293b;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: #fffffff1;
+    transition-duration: .3;
+    box-shadow: rgba(0,0,0,0.1);
+}
+
+.cancel:hover {
+    background-color: #f1f5f9;
+}
+
+.save {
+    width: 7.5em;
+    height: 2.5em;
+    cursor: pointer;
+    border: 1px solid #768499;
+    border-radius: 1em;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+    background-color: #6d81f6;
+    transition-duration: .3;
+    /* box-shadow: rgba(0,0,0,0.1); */
+}
+
+.save:hover {
+    background-color: #4053c9;
+}
+
+.save a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cancel a {
+    text-decoration: none;
+    color: #1e293b;
+}
+
+#text p, #text small, #text{
+    color: #fff;
+}
+
+#text p{
+    font-size: 22px;
+}
+
+#text small{
+    font-size: 14px;
+}
+
+#text a{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#text a:hover{
+    color: #fff;
+}
+
+#prodIMG{
+    max-width: 170px;
+    max-height: 110px;
+    border-radius: 20px;
+}
+
+#historyIMG{
+    max-width: 100px;
+    max-height: 30px;
+}
