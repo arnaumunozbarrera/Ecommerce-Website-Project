@@ -11,10 +11,9 @@ Ecologic Cars E-commerce Website.
 EcoCars: [EcoCars](https://tdiw-n7.deic-docencia.uab.cat/index.php)
 
 # Objectives
-• In this project I tried to learn the basic technologies for application development
-  web with dynamic content: HTML5, CSS, Javascript (using JSON),PHP + SQL and Fetch.
-• Be aware of the attacks to which web applications are exposed and learn how to avoid them.
-• Learn to implement a web application following the ModelView-Controller architecture (Model-View-Controller or, abbreviated, MVC).
+#### In this project I tried to learn the basic technologies for application development web with dynamic content: HTML5, CSS, Javascript (using JSON),PHP + SQL and Fetch.
+#### Be aware of the attacks to which web applications are exposed and learn how to avoid them.
+#### Learn to implement a web application following the ModelView-Controller architecture (Model-View-Controller or, abbreviated, MVC).
 
 # Features implemented
 • Product categories - data filtering
