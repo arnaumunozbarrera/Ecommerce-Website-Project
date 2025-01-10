@@ -6,28 +6,30 @@
             </tr>
             <?php
             $totalPrice = 0; 
-            foreach ($_SESSION['carrito'.$name] as $productid => $productDetails) { 
-                # Para que el precio total salga con el formato correcto
-                $priceString = str_replace(['.', '€', ' '], ['', '', ''], $productDetails['price']);
-                $priceNumeric = floatval(str_replace(',', '.', $priceString));
-                
-                $totalPrice += $priceNumeric * $productDetails['quantity'];
-            ?>
-                <tr>
-                    <td>
-                        <div class="cartInfo">
-                            <img id="prodIMG" src="<?php echo $productDetails['img'];?>" alt="Item img">
-                            <div id="text">
-                                <p><?php echo $productDetails['name'].", ".$productDetails['brand']; ?></p>
-                                <small>Price: <?php echo $productDetails['price'];?></small> 
-                                <br/>
-                                <a id="removeitem" onclick="console.log('Clicked:', 'removeitem', <?php echo $productid; ?>); refreshCartResum('removeitem', <?php echo $productid; ?>)">Remove item</a>
+            if(isset($_SESSION['carrito'.$name]))
+            {
+                foreach ($_SESSION['carrito'.$name] as $productid => $productDetails) { 
+                    # Para que el precio total salga con el formato correcto
+                    $priceString = str_replace(['.', '€', ' '], ['', '', ''], $productDetails['price']);
+                    $priceNumeric = floatval(str_replace(',', '.', $priceString));
+                    
+                    $totalPrice += $priceNumeric * $productDetails['quantity'];
+                ?>
+                    <tr>
+                        <td>
+                            <div class="cartInfo">
+                                <img id="prodIMG" src="<?php echo $productDetails['img'];?>" alt="Item img">
+                                <div id="text">
+                                    <p><?php echo $productDetails['name'].", ".$productDetails['brand']; ?></p>
+                                    <small>Price: <?php echo $productDetails['price'];?></small> 
+                                    <br/>
+                                    <a id="removeitem" onclick="console.log('Clicked:', 'removeitem', <?php echo $productid; ?>); refreshCartResum('removeitem', <?php echo $productid; ?>)">Remove item</a>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                    <td ><input type="text" value="<?php echo $productDetails['quantity']; ?>" id="quantity" onchange="console.log('Changed:', 'modifyquant', <?php echo $productid; ?>, this.value); modifyQuantity('modifyquant', <?php echo $productid; ?>, this.value)"></td>
-                </tr>
-            <?php } ?>
+                        </td>
+                        <td ><input type="text" value="<?php echo $productDetails['quantity']; ?>"  id="quantity" min="0" onchange="console.log('Changed:', 'modifyquant', <?php echo $productid; ?>, this.value); modifyQuantity('modifyquant', <?php echo $productid; ?>, this.value)"></td>
+                    </tr>
+            <?php } } ?>
         </table>
         <!-- <hr/> -->
         <br/>

@@ -1,13 +1,13 @@
 <?php
     session_start();
 
-    if (isset($_SESSION['username']))
+    if (isset($_SESSION['username']) && (isset($_SESSION['username'])))
     {
         require_once __DIR__.'/../view/menuoptions2.php';
 
         $name = $_SESSION['username'];
 
-        if ($_GET['action'] == 'logout') 
+        if ((isset($_GET['action'])) && $_GET['action'] == 'logout') 
         {
             unset($_SESSION['username']);
             unset($_SESSION['count']);

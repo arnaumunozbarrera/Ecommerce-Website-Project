@@ -20,13 +20,13 @@
             <i class='bx bxs-lock-alt'></i>
         </div>
         <div class="inputBox">
-            <input type="text" name="poblation" placeholder="* Population" required>
+            <input type="text" name="poblation" placeholder="* Population" required maxlength="30">
         </div>
         <div class="inputBox">
-            <input type="text" name="postalCode" placeholder="* Area Code" required>
+            <input type="text" name="postalCode" placeholder="* Area Code" required maxlength="5">
         </div>
         <div class="inputBox">
-            <input type="text" name="address" placeholder="* Address" required>
+            <input type="text" name="address" placeholder="* Address" required maxlength="30">
         </div>
         <div class="inputBox">
             <input type="text" name="phoneNumber" placeholder="* Phone Number" required>

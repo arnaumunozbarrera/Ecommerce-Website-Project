@@ -98,7 +98,11 @@ async function refreshCartResum(removeitem, product_id) {
 
 async function modifyQuantity(modifyquant, product_id, value) {
     var resposta1 = await fetch("/../controller/cartresum.php?act=" + modifyquant + "&product_id=" + product_id + "&value=" + value);
-    alert('Item correctly modified!');
+    if (value >= 0) {
+        alert('Item correctly modified!');
+    } else {
+        alert('Select a valid quantity!');
+    }
 
     var resposta2 = await fetch("/../controller/cartresum.php");  
     var resposta2Txt = await resposta2.text(); 

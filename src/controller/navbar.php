@@ -5,7 +5,7 @@
     require_once __DIR__.'/../model/consult_users.php'; 
     require_once __DIR__.'/../model/consult_products.php'; 
 
-    if (isset($_SESSION['username']) && ($_GET['action'] == 'logout'))
+    if (isset($_SESSION['username']) && (isset($_GET['action'])) && ($_GET['action'] == 'logout'))
     {
         $name = $_SESSION['username'];
         header('Refresh: 1; URL=index.php');
@@ -35,7 +35,7 @@
         }
         else 
         {
-            echo "No items found for this search";
+            echo "<p style='color: white; font-size: 24px; text-align: center'>No items found for this search</p>";
         }
     }
 ?>

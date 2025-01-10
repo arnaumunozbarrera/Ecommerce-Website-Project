@@ -52,8 +52,8 @@
     function getHistoryByUsername($con, $username) : array
     {   
         $sql = "SELECT *
-                FROM ticket 
-                WHERE username = $1";
+                FROM ticket t , ticketline tl, product p
+                WHERE t.username = $1 AND t.ticketid = tl.ticketid AND tl.productid = p.productid";
 
         $consulta = pg_query_params($con, $sql, [$username]);
 

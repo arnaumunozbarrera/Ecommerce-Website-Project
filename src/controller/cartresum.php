@@ -18,19 +18,26 @@
         header('Refresh: 1; URL=index.php?action=cart');
     }
 
-    $id = $_GET['product_id'];
+    if(isset($_GET['product_id']))
+        $id = $_GET['product_id'];
 
-    if($_GET['act'] == 'removeitem') 
+    if(isset($_GET['act']) && $_GET['act'] == 'removeitem') 
     {
         unset($_SESSION['carrito'.$name][$id]);
 
         require_once __DIR__ . '/../view/cartresum.php';
     }
 
-    if($_GET['act'] == 'modifyquant') 
+    if(isset($_GET['act']) && $_GET['act'] == 'modifyquant') 
     {
         $value = $_GET['value'];
-        $_SESSION['carrito'.$name][$id]['quantity'] = $value;
+        if ($value >= 0) {
+            $_SESSION['carrito'.$name][$id]['quantity'] = $value;
+            if ($value == 0) {
+            unset($_SESSION['carrito'.$name][$id]);
+            }
+        }
+        
         require_once __DIR__ . '/../view/cartresum.php';
     }
 ?>

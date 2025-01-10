@@ -18,9 +18,14 @@
 
         $length_DNI_PHONE = 9;
         $length_POSTAL = 5;
+        $length_POBLATION_ADDRESS = 30;
+
+        $postalCodeInt = intval($postalCode);
 
         if(filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($DNI) == $length_DNI_PHONE 
-            && strlen($phoneNumber) == $length_DNI_PHONE && strlen($postalCode) == $length_POSTAL)
+            && strlen($phoneNumber) == $length_DNI_PHONE && strlen($postalCode) == $length_POSTAL
+            && strlen($address) <= $length_POBLATION_ADDRESS && strlen($poblation) <= $length_POBLATION_ADDRESS
+            && is_int($postalCodeInt))
         {
             $result = addUser($DNI, $username, $email, $password, $poblation, $postalCode, $phoneNumber, $address, $conn);
         }
